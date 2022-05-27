@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.19438561_DangNhatKhuong_AndroiExam">
         <activity
+            android:name=".Statistical"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
