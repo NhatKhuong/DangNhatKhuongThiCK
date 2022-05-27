@@ -6,13 +6,85 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <Button
+        android:id="@+id/btnAdd_skills"
+        android:layout_width="170dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#C1C33F"
+        android:text="add(skills)"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/txtThoiLuongInput"
+        app:layout_constraintTop_toBottomOf="@+id/txtThoiLuongInput" />
+
+    <Button
+        android:id="@+id/btnsavetocloud"
+        android:layout_width="170dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#C1C33F"
+        android:text="Save to cloud"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/btnAdd_skills"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd_skills" />
+
+    <Button
+        android:id="@+id/btnsyn"
+        android:layout_width="170dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="#C1C33F"
+        android:text="Synchronize"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnsavetocloud"
+        app:layout_constraintStart_toEndOf="@+id/btnsavetocloud"
+        app:layout_constraintTop_toTopOf="@+id/btnsavetocloud" />
+
+    <Button
+        android:id="@+id/btnAdd_careers"
+        android:layout_width="170dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="#C1C33F"
+        android:text="add(Careers)"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAdd_skills"
+        app:layout_constraintStart_toEndOf="@+id/btnAdd_skills"
+        app:layout_constraintTop_toTopOf="@+id/btnAdd_skills" />
+
+    <EditText
+        android:id="@+id/txtTenKhoaHocInput"
+        android:layout_width="364dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Tên khóa học"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtThoiLuongInput"
+        android:layout_width="364dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Thời lượng"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txtTenKhoaHocInput"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtTenKhoaHocInput"
+        app:layout_constraintTop_toBottomOf="@+id/txtTenKhoaHocInput" />
+
+    <ListView
+        android:id="@+id/lvKhoaHoc"
+        android:layout_width="393dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnsavetocloud" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
